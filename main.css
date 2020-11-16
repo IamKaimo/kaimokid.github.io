@@ -22,7 +22,7 @@
     width: 90%;
     position: relative;
     left: 5%;
-    top:20px;
+    top:50px;
     clear: both;
 }
 
@@ -77,6 +77,19 @@ input.next{
 
 
 /**/
+
+@media only screen and (min-width: 700px) {
+   
+    .fullbox{
+        width: 50%;
+        left: 25%;
+    }
+  }
+
+
+
+
+
 
 
 body{

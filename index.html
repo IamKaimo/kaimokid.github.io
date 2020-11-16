@@ -31,9 +31,9 @@
                         <div><p id="sreg">Register</p></div>
                     </div>
                    <div>
-                    <form id="login">           
-                        <p>User/Email:</p>  <input type="email" placeholder="Enter Username">
-                        <p>Password:</p>    <input type="password" placeholder="Enter Password">
+                    <form id="login" method="POST" action="login.php">           
+                        <p>Email/Username:</p>  <input type="text" placeholder="Enter Email or User" name="logID">
+                        <p>Password:</p>    <input type="password" placeholder="Enter Password" name="password">
                         <input class="next" type="submit" value="Login"  >  
                     </form>
                     
@@ -41,7 +41,7 @@
                         <p>Full Name:</p>
                         <div style="float: right; margin: 15px 0; height: 20px; padding: 0; width: 50%;">
                         <input type="text" name="f_name" placeholder="Firstname" style="width: 50%;"><input type="text" name="l_name" placeholder="Lastname"   style="width: 50%;"></div>
-                        <p>Email address:</p><input type="text" name="email" placeholder="Enter Email">
+                        <p>Email address:</p><input type="email" name="email" placeholder="Enter Email">
                         <p>Password:</p><input type="password" name="password" placeholder="Enter Password">
                         <p>Phone Number:</p><input type="text" name="phone_num" placeholder="Enter Mobile Number">
                         <p>Date of Birth:</p><input type="date">
