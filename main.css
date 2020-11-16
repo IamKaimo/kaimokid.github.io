@@ -15,51 +15,64 @@
     margin: 15px 0 5px 0 ;
 }
 
-.loginbox{
+.fullbox{
     border: 2px black solid;
     border-radius: 15px;
-    height: 370px;
     background-color: rgba(50,50,50,0.2);
-    width: 60%;
+    width: 90%;
     position: relative;
-    left: 20%;
+    left: 5%;
     top:20px;
     clear: both;
-    
 }
 
-#switch{
-    font-size: 150%; 
+#switchbar{
+    text-align: center;
+    font-size: 120%; 
     border-bottom: 2px solid black; 
     border-radius: 15px;
-    margin-bottom: 35px; 
+    margin-bottom: 20px; 
     color: midnightblue;
-    font-weight: 900;
-    background-color: 	rgba(230, 230, 230,0.6);  
+    font-weight: bolder;
+    font-family: serif; 
+    font-variant: small-caps; 
+    background-color: rgba(230, 230, 230,0.6);  
 }
 
-#login,#register{
-    position: absolute;
-    left: 15px;
-}
-
-#login p,#register p{
+#switchbar > div{
+    width: 45%;
     display: inline-block;
-    margin-bottom: 10px;
 }
-#register button{
-    position: absolute;
-    left: 35px;
+
+#switchbar p{
+  margin: 10px 0;
 }
-#login button{
-    position: absolute;
-    left: 30px;
-    bottom: -82px;
+
+form{
+    width: 100%;
+    padding: 0 10%;
 }
-#login a{
-    position: absolute;
-    left: 140px;
-    bottom: -82px;
+
+form > p{
+    float: left;
+    margin: 15px 0;
+    clear: left;
+    height: 20px;
+    color: darkslateblue;
+    font-weight: bolder;
+}
+
+form > input{
+    float: right;
+    margin: 15px 0;
+    clear: right;
+    height: 20px;
+    width: 50%;
+}
+
+input.next{
+    width: 45%; height: 25px; clear: both; float: none; position: relative; left: 25%;
+    border-radius: 8px;
 }
 
 
@@ -86,49 +99,4 @@ body::before {
 
 * {
 box-sizing:border-box;
-}
-
-[class*="colx"] {
-    width: 100%;
-    float: left;
-    padding: 5px;
-    //border: 1px dashed silver;
-}
-
-@media only screen and (min-width: 768px) {
-.colx1 {
-    width: 10%;
-}
-.colx2 {
-    width: 20%;
-}
-.colx3 {
-    width: 30%;
-}
-.colx4 {
-    width: 40%;
-}
-.colx5 {
-    width: 50%;
-}
-.colx6 {
-    width: 60%;
-}
-.colx7 {
-    width: 70%;
-}
-.colx8 {
-    width: 80%;
-}
-.colx9 {
-    width: 90%;
-}
-.colx10 {
-    width: 100%;
-}}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
 }
