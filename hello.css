@@ -1,0 +1,125 @@
+.logotxt > p{
+    font-family: serif; color: rgb(48, 42, 42); font-size: 100%;
+    font-weight: 900;
+    margin: 3px 0;
+    font-style: italic;
+}
+
+.logotxt > #logo{
+    font-family: monospace;
+    font-variant: small-caps;
+    font-size: 400%;
+    color: whitesmoke;
+    font-style: italic;
+    font-weight: bolder;
+    margin: 15px 0 5px 0 ;
+}
+
+.fullbox{
+    border: 2px black solid;
+    border-radius: 15px;
+    background-color: rgba(50,50,50,0.2);
+    width: 90%;
+    position: relative;
+    left: 5%;
+    top:50px;
+    clear: both;
+}
+
+#switchbar{
+    text-align: center;
+    font-size: 120%; 
+    border-bottom: 2px solid black; 
+    border-radius: 15px;
+    margin-bottom: 20px; 
+    color: midnightblue;
+    font-weight: bolder;
+    font-family: serif; 
+    font-variant: small-caps; 
+    background-color: rgba(230, 230, 230,0.6);  
+}
+
+#switchbar > div{
+    width: 45%;
+    display: inline-block;
+}
+
+#switchbar p{
+  margin: 10px 0;
+}
+
+form{
+    width: 100%;
+    padding: 0 10%;
+}
+
+form > p{
+    float: left;
+    margin: 15px 0;
+    clear: left;
+    height: 20px;
+    color: darkslateblue;
+    font-weight: bolder;
+}
+
+form > input{
+    float: right;
+    margin: 15px 0;
+    clear: right;
+    height: 20px;
+    width: 50%;
+}
+
+input{
+    border: midnightblue 1px solid;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input.next{
+    width: 45%; height: 25px; clear: both; float: none; position: relative; left: 25%;
+    border-radius: 8px;
+    background-color: #f8f2ec;
+    font-weight: bolder;
+    font-family: sans-serif;
+    border: black 2px solid;
+}
+
+
+/**/
+
+@media only screen and (min-width: 700px) {
+   
+    .fullbox{
+        width: 50%;
+        left: 25%;
+    }
+  }
+
+
+
+
+
+
+
+body{
+    margin: 0;
+}
+
+body::before {
+  content: "";
+  background-image: url(background.jpg);
+  opacity: 0.5;
+  top: 0;   
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+box-sizing:border-box;
+}

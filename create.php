@@ -1,17 +1,15 @@
 <?php
-                    $server = "localhost";
-                    $user = "root";
-                    $pass = "";
-                    $db = "silvaro";
-    
+                      $server = "www.db4free.net:3306";
+                      $user = "kaimokid@gmail.com";
+                      $pass = "Kaimo1412K";
+                      $dbname = "silvaro";
+                        
                     $conn = new mysqli($server, $user, $pass);
-
                     if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                    }
-                    echo "Connection Success!"."<br>";
+                    die("Connection failed: " . $conn->connect_error);}
 
-                    $sql = "CREATE DATABASE ".$db;
+
+                    $sql = "CREATE DATABASE ".$dbname;
                     if ($conn->query($sql) === TRUE) {
                         echo "Database created successfully"."<br>";
                     } 
@@ -19,7 +17,7 @@
                          echo "Error creating database: " . $conn->error."<br>";
                     }
 
-                    $conn = new mysqli($server, $user, $pass ,$db);
+                    $conn = new mysqli($server, $user, $pass ,$dbname);
 
                     $sql = "CREATE TABLE users(
                         id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,

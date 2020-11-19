@@ -1,15 +1,7 @@
 <?php
 
-                    $server = "localhost";
-                    $user = "root";
-                    $pass = "";
-                    $dbname = "silvaro";
-    
-                    $conn = new mysqli($server, $user, $pass ,$dbname);
-
-                    if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);}
-
+                    require 'connect.php';
+                    session_start();
 
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $logID = strtolower(test_input($_POST["logID"]));
@@ -32,7 +24,13 @@
                     $realpass = $row['password'];
                     $realname = $row['f_name']." ".$row['l_name'];
 
-                    if ($realpass==$password) header("Location: $username/index.php");
+                    if ($realpass==$password)
+                    {
+                    
+                    $_SESSION['username'] = $username;
+                    $_SESSION['realname'] = $realname;
+                    header("Location: index.php");
+                    }
                     else die ("Wrong Password");
 
                     function test_input($data) {

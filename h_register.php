@@ -9,6 +9,7 @@
                     $l_name = test_input($_POST["l_name"]);
                     $email = strtolower(test_input($_POST["email"]));
                     $password = test_input($_POST["password"]);
+                    if($password !=test_input($_POST["password_c"]))die("Password doesnt match Re-Password!");
                     $phone_num = test_input($_POST["phone_num"]);
                     }
 
@@ -34,8 +35,9 @@
                     if($valid == FALSE)die("Invalid Password");
                     $valid = preg_match($phone_c,$phone_num);
                     if($valid == FALSE )die("Invalid Phone");
-
-
+                    $sql ="SELECT password, f_name, l_name, username FROM users WHERE username='$logID'";
+                    $result = $conn->query($sql);
+                    if (mysqli_num_rows($result) != 0) die("Email is already used!");
 
 
 
