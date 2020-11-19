@@ -1,8 +1,8 @@
 <?php
-                      $server = "www.db4free.net:3306";
-                      $user = "kaimokid@gmail.com";
-                      $pass = "Kaimo1412K";
-                      $dbname = "silvaro";
+                    $server = "localhost";
+                    $user = "root";
+                    $pass = "";
+                    $dbname = "silvaro";
                         
                     $conn = new mysqli($server, $user, $pass);
                     if ($conn->connect_error) {

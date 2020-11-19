@@ -17,13 +17,13 @@ session_start();
   
     
     <body>
-    <div style="position:relative; left:30%; width:40%; text-align:center; background-color:silver;">
+    <div style="position:relative; left:5%; width:90%; text-align:center; background-color:silver;">
 
 
     
         <P style="font-size:200%; color:green;"> <?php echo $_SESSION['realname']; ?></p>
         <div>
-        <img src="pp.jpg" style="width: 400px;" alt="profile_pic">
+        <img src="pp.jpg" style="width: 50%;" alt="profile_pic">
         </div>
         <form action="../upload.php" method="post" enctype="multipart/form-data">
           Select IMG:
@@ -31,7 +31,7 @@ session_start();
          <input type="submit" value="Upload Image" name="submit">
         </form>
 </br>
-<p style="font-size:300%"><a href="../">Go To Home</a></p>
+<p style="font-size:250%"><a href="../">Go To Home</a></p>
 </div>
         
     </body>  
