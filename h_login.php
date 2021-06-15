@@ -16,7 +16,7 @@
 
                     $result = $conn->query($sql);
 
-                    if (mysqli_num_rows($result) == 0) die("Email/Username Not Found!");
+                    if (mysqli_num_rows($result) == 0) {$_SESSION['error']="Email/Username Not Found!";  $_SESSION['page2']="true"; header("location: hello.php");die;}
 
 
                     $row = mysqli_fetch_assoc($result);
@@ -31,16 +31,20 @@
                     $_SESSION['realname'] = $realname;
                     header("Location: index.php");
                     }
-                    else die ("Wrong Password");
+                    else {$_SESSION['error']="Invalid Password!";  $_SESSION['page2']="true"; header("location: hello.php");die;}
 
-                    function test_input($data) {
-                    $data = trim($data);
-                    $data = stripslashes($data);
-                    $data = htmlspecialchars($data);
-                    return $data;
-                    }
+
 
                     $conn->close();
 
+
+
+
+                    function test_input($data) {
+                        $data = trim($data);
+                        $data = stripslashes($data);
+                        $data = htmlspecialchars($data);
+                        return $data;
+                        }
 ?>
         
